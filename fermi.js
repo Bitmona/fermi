@@ -58,7 +58,6 @@ function keyPressed(event){
         
         handleSubmit();
         changeStatsDisplay();
-        newQuestion();
     }else if (event.key=="ArrowRight"){
         forward();
         changeStatsDisplay();
