@@ -536,6 +536,10 @@ class SessionData{
         return this.answered != 0 ? this.points/(this.answered*5) : 0;
     }
 
+    getAvg(){;
+        return this.answered != 0 ? this.points/(this.answered) : 0;
+    }
+
     addPoints(points){
         if (this.aset.has(curID)){
             return;
@@ -563,6 +567,7 @@ class SessionData{
         return `Visited: ${this.visited}<br>
                 Answered: ${this.answered}<br>
                 Points: ${this.points}/${this.answered*5}<br>
-                Accuracy: ${(this.getAccuracy()*100).toFixed(1)}%<br>`
+                Accuracy: ${(this.getAccuracy()*100).toFixed(1)}%<br>
+                Q Avg: ${this.getAvg().toFixed(2)}<br>`
     }
 }
